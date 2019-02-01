@@ -1,0 +1,164 @@
+﻿
+@model MinesweeperWeb.Models.user
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <style>
+        .field-validation-error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="register-div">
+        @using (Html.BeginForm("Create", "Register", FormMethod.Post))
+        {
+        <table>
+            <tr>
+                <td></td>
+                <td>Register Here </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.firstname)
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.firstname)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>@Html.ValidationMessageFor(model => model.firstname)</td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.lastname)
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.lastname)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>@Html.ValidationMessageFor(model => model.lastname)</td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.email)
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.email)
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>@Html.ValidationMessageFor(model => model.email)</td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.sex)
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.sex)
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>@Html.ValidationMessageFor(model => model.sex)</td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.age)
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.age)
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>@Html.ValidationMessageFor(model => model.age)</td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.state)
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.state)
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>@Html.ValidationMessageFor(model => model.state)</td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.username)
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.username)
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>@Html.ValidationMessageFor(model => model.username)</td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.password)
+                </td>
+                <td>
+                    @Html.PasswordFor(model => model.password)
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>@Html.ValidationMessageFor(model => model.password)</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label class="field-validation-error">@Html.DisplayFor(model => model.RegisterFail)</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" name="name" value="Submit " />
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Click <a href="@Url.Action("Index", "Login")">Here</a> to Login</td>
+                <td></td>
+            </tr>
+        </table>
+        }
+
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>
+

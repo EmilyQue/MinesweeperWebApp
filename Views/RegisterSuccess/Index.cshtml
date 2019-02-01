@@ -1,0 +1,20 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <div>
+        <h1>Success! You have created an account</h1>
+        <h3>Username: @Session["username"].ToString()</h3>
+        <a href="@Url.Action("Index", "Login")">Login</a>
+    </div>
+</body>
+</html>
+
